@@ -93,7 +93,7 @@ listRetailers = '''
 
 
 #CONNECTION
-api_token = 'da2-55mm7r3uurhyvcd5f2eg45zuoq'
+api_token = api_token
 headers = {'x-api-key': api_token}
 url = 'https://ef4sj5sa6nbktijcrgrbzjqgyy.appsync-api.us-east-1.amazonaws.com/graphql'
 
@@ -124,7 +124,7 @@ stores = stores.rename({'createdAt':'store_createdAt'},axis=1)
 # Configure the connection 
 scope = ['https://spreadsheets.google.com/feeds']
 # Give the path to the Service Account Credential json file 
-credentials = ServiceAccountCredentials.from_json_keyfile_name('/Users/hans/Desktop/Main/Python/GRAPHQL/graphqlgs-a97c45fdc0d8.json',scope)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('graphqlgs-a97c45fdc0d8.json',scope)
 # Authorise your Notebook
 gc = gspread.authorize(credentials)
 # The sprad sheet ID, which can be taken from the link to the sheet
